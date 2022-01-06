@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  객체
+</body>
+</html>
+<script>
+  const person = {
+    name: '박정혜',
+    age: 22,
+    birthday: '00-12-26',
+    func: function() {
+      return '객체안에 함수';
+    },
+    array: [1, 2, 3],
+    ob: {
+      name: '객체안에 객체'
+    }
+  };
+
+  console.log(person.name);
+  console.log(person.age);
+  console.log(person.birthday);
+  console.log(person.array[0]);
+  console.log(person.array[1]);
+  console.log(person.array[2]);
+  console.log(person.func());
+  console.log(person.ob.name);
+</script>
