@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>구조분해할당</title>
+</head>
+<body>
+  구조분해할당
+</body>
+</html>
+<script>
+  const dog = {
+    name: '개리',
+    color: '흰색',
+    bark: function() {
+      console.log('왈왈');
+      // const name = this.name;
+      // const color = this.color;
+      const {name, color} = this;
+      return {
+        name: '멍뭉이',
+        color: '아이보리'
+        // 이름이 같으면 생략가능
+        // name: name == name
+        // color: color == color
+      }
+    }
+  }
+  const {weight = "100kg"} = dog
+  console.log('강아지 몸무게', weight);
+
+  // 구조분해할당
+  const {name, color, bark} = dog;
+    // const name = dog.name;
+    // const color = dog.color;
+    // const bark = dog.bark();
+    // 자주 사용하는건 이렇게 정리해서 변수만 불러도됨
+  console.log(name);
+  console.log(color);
+  console.log(dog.bark());
+</script>

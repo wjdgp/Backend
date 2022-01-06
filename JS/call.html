@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>call</title>
+</head>
+<body>
+  call
+</body>
+</html>
+<script>
+  // const ex = (call, number) => {
+  //   call(number);
+    // call에 number을 넣어줌
+    // call = print
+    // number = 1
+    // number = num
+    // num = 1
+  // }
+
+  // const print = (num) => {
+  //   console.log('num: ', num);
+  // }
+  // ex(print, 1);
+
+  // ex((param) => {
+  //   console.log(param);
+  // }, 1);
+  // setTimeout과 같은 형식
+
+  // const test = (cb, cb1, number) => {
+  //   cb(number);
+  //   cb1(number);
+  // }
+
+  // const test2 = (num) => {
+  //   console.log('test2', num);
+  // }
+
+  // const test3 = (num2) => {
+  //   console.log('test3', num2);
+  // }
+
+  // test(test2, test3, 5);
+
+  // test((param) => {
+  //   console.log('test', param);
+  // }, test2, 3)
+
+  // 강사님
+  const example = (cb2, cb3, number2) => {
+    cb2(number2);
+    const number3 = 5;
+    cb3(number2 + number3);
+  }
+
+  example((param2) => {
+    console.log('cb2', param2);
+  }, 
+  (param2) => {
+    console.log('cb3', param2 + 10);
+  }, 6);
+</script>

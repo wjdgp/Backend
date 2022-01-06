@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>async / await</title>
+</head>
+<body>
+  async / await
+</body>
+</html>
+<script>
+  (
+    async () => { // async / await
+      try {
+        const res = await data(2)
+        // data(2).then(res)
+        // 첫번째 .then
+        const res2 = res + 1;
+        // return이 필요없음
+        console.log('res1: ', res);
+        console.log('res2: ', res2);
+      } catch(err) {
+        console.error('error: ', err);
+      }
+    }
+  )()
+
+  (
+    async () => {
+      const res = await data(1);
+      // Promise에 값을 받아서 쓰고싶으면
+      // await가 필요하다
+      // 안적어주면 Promise로 넘어온다
+      // 적어주면 값만 넘어온다
+      console.log('async1: ', res);
+      const res2 = await new Promise(resolve => {
+        setTimeout(() => {
+          resolve(res + 1);
+      }, 1000);
+      });
+      console.log('async2: ',  res2);
+      const res3 = await new Promise(resolve => {
+        setTimeout(() => {
+          resolve(res2 + 1);
+        }, 1000);
+      });
+      console.log('async3: ', res3);
+    }
+  )()
+</script>

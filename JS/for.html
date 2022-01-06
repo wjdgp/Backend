@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반복문</title>
+</head>
+<body>
+  for
+</body>
+</html>
+<script>
+  let i = 0;
+  i += 1;
+  // i = i + 1;
+  // 1
+  console.log(i);
+
+  let num = 0;
+
+  for (let i = 0; i <= 5; i++) {
+    // num = num + 1;
+    console.log(i);
+  }
+
+  // 0~5까지 반복해줌
+
+  // 배열 반복문
+  const data = [0, 1, 2, 3, 4];
+
+  // for (let num = 0; num < 5; num++) {
+  //   console.log(`data[${num}]: ${data[num]}`);
+  // }
+
+  // foreach
+  // forEach(익명함수)
+  // data.forEach((item, index) => {
+  //   console.log(index, item);
+  // });
+  // value, index, array -> 이 순번대로 적는다
+  // array는 잘 안적음
+
+  // map
+  // data.map((item, index) => {
+  //   console.log(index, item);
+  // });
+  
+  // let datacopy = []
+
+  // datacopy = data.map((item, index) => {
+  //   // console.log(index, item);
+  //   return item  + 1;
+  // });
+
+  // console.log("datacopy", datacopy);
+
+  const data2 = [
+    {id: 0, name: "짱구"},
+    {id: 1, name: "맹구"},
+    {id: 2, name: "유리"},
+    {id: 3, name: "철수"},
+    {id: 4, name: "훈이"}
+  ]
+
+  data2.forEach((item, index) => {
+    console.log(index, item.name);
+  });
+
+  data2.map((item, index) => {
+    return 1;
+  });
+
+  console.log(data2);
+</script>

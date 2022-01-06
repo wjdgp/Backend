@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promise</title>
+</head>
+<body>
+  프라미스
+</body>
+</html>
+<script>
+  const data = new Promise((resolve, reject) => {
+    resolve(1);
+  })
+  data
+  .then(res => {
+    console.log('then1', res);
+    return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve( res + 1);
+    }, 1000);
+    })
+  })
+  .then(res => {
+    console.log('then2', res);
+  })
+  .catch(err => {
+    console.error(err);
+  })
+  console.log(data);
+
+  data(1)
+    .then(res => {
+      console.log('then1', res);
+      return new Promise((resolve) => {
+        setTimeout(() => {
+        resolve(); // 이행 fullfiled
+      }, 1000);
+      });
+    })
+    .then(res => {
+      console.log('then2', res);
+    })
+    .catch(err => {
+      console.error(err);
+    })
+</script>

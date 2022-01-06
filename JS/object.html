@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>객체</title>
+</head>
+<body>
+  Object(객체)
+</body>
+</html>
+<script>
+  // 변수로 할당해줘서 사용
+  const dog = {
+    // property(속성)
+    name: '개리', // 속성1
+    color: '흰색', // 속성2
+    bark: function() {
+      console.log(`${this.name} 왈왈`);
+      // 객체 안에서 함수를 만들었을때
+      // 객체 안에 속성을 가져와 사용할수 있음
+      // 이때 this. 를 써줘야함
+      // this.키값
+    }
+  }
+  // 불러오는 방식
+  // 첫번째
+  dog.name
+  dog.color
+
+  // 두번째
+  dog["name"]
+  dog["color"]
+
+  // 함수
+  dog.bark()
+  console.log(`강아지 이름은 ${dog.name}, 강아지 색깔은 ${dog.color}`);
+</script>
